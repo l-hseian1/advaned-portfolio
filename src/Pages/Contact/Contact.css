@@ -1,0 +1,102 @@
+.Contact .contact__content{
+    padding: 20px;
+}
+.Contact .contact__content .contact__content__header{
+    color: var(--yellow-theme-sub-text-color);
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-bottom: 2px solid var( --yellow-theme-main-color);
+}
+.Contact .contact__content .contact__content__header::before,
+.Contact .contact__content .contact__content__header::after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 5px;
+    background-color: var(--yellow-theme-main-color);
+    bottom: -1px;
+}
+.Contact .contact__content .contact__content__header::before{
+    left: 0;
+}
+.Contact .contact__content .contact__content__header::after{
+    right: 0;
+}
+.Contact .contact__content .contact__content__form{
+    margin-top: 30px;
+}
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div{
+    position: relative;
+}
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputName,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputEmail,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputDisription{
+    width: 100%;
+    border: 2px solid var(--yellow-theme-main-color);
+    padding: 16px 12px;
+    transition: all 0.5s ease;
+    position: relative;
+    background-color: transparent;
+    color: var(--yellow-theme-sub-text-color);
+}
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div  .nameLable,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div  .emailLable,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div  .discriptionLable{
+    font-weight: 500;
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    transition: all 0.2s ease;
+    color: var(--yellow-theme-sub-text-color);
+    font-size: 16px;
+}
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputName:focus,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputEmail:focus,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputDisription:focus{
+    outline: none;
+}
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputName:focus + .nameLable,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputName:valid + .nameLable,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputEmail:focus + .emailLable,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputEmail:valid + .emailLable,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputDisription:focus + .discriptionLable,
+.Contact .contact__content .contact__content__form .contact__content__form__control-wrapper div .inputDisription:valid + .discriptionLable{
+    font-size: 18px;
+    top: -25px;
+    left: 0px;
+}
+.contact__content__form button{
+    cursor: pointer;
+    padding: 10px 70px;
+    font-size: 2rem;
+    background: transparent;
+    color: var(--yellow-theme-main-color);
+    border: 1.5px solid var(--yellow-theme-main-color);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.contact__content__form button:hover{
+    color: #000;
+    background: var(--yellow-theme-main-color);
+}
+
+@media only screen and (max-width : 768px){
+    .Contact .contact__content .contact__content__form{
+        text-align: center;
+    }
+    .Contact .contact__content .contact__content__form .contact__content__form__control-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
